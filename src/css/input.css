@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Lato", sans-serif;
+}
+.navbar-fixed {
+  @apply fixed z-[9999] border-b-8 border-bgbrown bg-bground;
+}
+.humberger-line {
+  @apply w-[30px] h-[2px] my-2 block bg-primary;
+}
+.humberger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+.humberger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.humberger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
