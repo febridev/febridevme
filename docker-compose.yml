@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  emangpodcast:
+    container_name: febridevme
+    image: febridevme:1.0
+    ports:
+      - 8004:80
