@@ -1,39 +1,43 @@
 import Header from './components/Header';
+import HeroSection from './components/HeroSection';
+import TechStack from './components/TechStack';
 import GitHubSection from './components/GitHubSection';
-import LinkedInSection from './components/LinkedInSection';
+import ExperienceSection from './components/ExperienceSection';
 import MediumSection from './components/MediumSection';
+import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 
 export const metadata = {
-  title: 'Portfolio - GitHub, LinkedIn & Medium',
-  description: 'Showcase your GitHub repositories, LinkedIn posts, and Medium articles in one place',
+  title: 'DevPortfolio - Modern Card Variant',
+  description: 'Full-stack developer and content creator specializing in modern web technologies. Transforming ideas into scalable, robust digital solutions.',
 };
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark">
       <Header />
-      <main>
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-gray-800 to-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Welcome to My Portfolio
-            </h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Explore my work across GitHub, LinkedIn, and Medium. All your professional content in one place.
-            </p>
+      <main className="flex-grow">
+        <div className="layout-container flex flex-col items-center">
+          <div className="layout-content-container flex flex-col w-full max-w-[1200px] px-4 md:px-10 py-5">
+            {/* Hero Section */}
+            <HeroSection />
+
+            {/* Tech Stack */}
+            <TechStack />
+
+            {/* Latest Projects Section */}
+            <GitHubSection />
+
+            {/* Experience Section */}
+            <ExperienceSection />
+
+            {/* Articles / Medium Section */}
+            <MediumSection />
+
+            {/* CTA Section */}
+            <CTASection />
           </div>
-        </section>
-
-        {/* GitHub Section */}
-        <GitHubSection />
-
-        {/* LinkedIn Section */}
-        <LinkedInSection />
-
-        {/* Medium Section */}
-        <MediumSection />
+        </div>
       </main>
       <Footer />
     </div>

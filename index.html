@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevPortfolio - Modern Card Variant</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display antialiased overflow-x-hidden">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-10 py-3">
+<div class="flex items-center gap-4">
+<div class="size-8 flex items-center justify-center rounded bg-primary text-white">
+<span class="material-symbols-outlined text-xl">code</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">DevPortfolio</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<nav class="flex items-center gap-9">
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Projects</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Experience</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Articles</a>
+</nav>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-blue-600 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Hire Me</span>
+</button>
+</div>
+<div class="md:hidden">
+<button class="text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow">
+<div class="layout-container flex flex-col items-center">
+<div class="layout-content-container flex flex-col w-full max-w-[1200px] px-4 md:px-10 py-5">
+<!-- Hero Section -->
+<div class="@container">
+<div class="flex flex-col-reverse gap-6 py-10 @[480px]:gap-8 @[864px]:flex-row @[864px]:items-center">
+<div class="flex flex-col gap-6 @[480px]:gap-8 flex-1">
+<div class="flex flex-col gap-4 text-left">
+<div class="inline-flex items-center gap-2 self-start rounded-full bg-primary/10 px-3 py-1 text-primary dark:text-blue-400">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-xs font-bold uppercase tracking-wider">Open to work</span>
+</div>
+<h1 class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl lg:text-6xl">
+                                        Building the future, <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">one commit at a time.</span>
+</h1>
+<h2 class="text-slate-500 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-xl">
+                                        Full-stack developer and content creator specializing in modern web technologies. Transforming ideas into scalable, robust digital solutions.
+                                    </h2>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center gap-2 rounded-lg h-12 px-6 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-base font-bold transition-transform active:scale-95 hover:shadow-lg">
+<span>View Github</span>
+<span class="material-symbols-outlined text-lg">open_in_new</span>
+</button>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center gap-2 rounded-lg h-12 px-6 bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white text-base font-bold transition-transform active:scale-95 hover:bg-slate-300 dark:hover:bg-slate-700">
+<span>Read Articles</span>
+<span class="material-symbols-outlined text-lg">article</span>
+</button>
+</div>
+<div class="flex gap-6 mt-4">
+<div class="flex flex-col">
+<span class="text-2xl font-bold text-slate-900 dark:text-white">50+</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">Projects Completed</span>
+</div>
+<div class="h-auto w-px bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex flex-col">
+<span class="text-2xl font-bold text-slate-900 dark:text-white">5k+</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">Contributions</span>
+</div>
+<div class="h-auto w-px bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex flex-col">
+<span class="text-2xl font-bold text-slate-900 dark:text-white">10+</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">Articles</span>
+</div>
+</div>
+</div>
+<div class="w-full flex-1 flex justify-center @[864px]:justify-end">
+<div class="relative w-full max-w-[500px] aspect-square rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-2xl rotate-3 hover:rotate-0 transition-all duration-500">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Abstract digital workspace with glowing code screens" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCUxuez6rxBoc5WlG-AqeWPX-Q8tT1gwdCAYc-kSGkBf-qi7LU98bhMPZ-lw2LRQUwnONN8lPDnLdhZn90MJvIfYse4ZDdM8_rs7qi0OU6HP3GmaLlo-N6v_2cxBV1X-zUns--z84jfUkg75Tq3cCqhkSqmwixRNuwMuzxOYeuCDmYU4utpCoYI-7FzLUg1iq4zZl-IkW2k98ejK0dCb9Dxi0qdmN-LdyPhWByYIzgA39MMORYgPx4POMIVtVL37OFxMyFC_wyrNjk");'></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Tech Stack Marquee (Static representation for this exercise) -->
+<div class="w-full py-12 border-y border-slate-200 dark:border-slate-800 my-10 bg-white dark:bg-slate-900/50">
+<p class="text-center text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-6">Technologies I work with</p>
+<div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl text-[#61DAFB]">javascript</span>
+<span class="text-xs font-medium">React</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl text-[#3178C6]">code</span>
+<span class="text-xs font-medium">TypeScript</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl text-[#339933]">terminal</span>
+<span class="text-xs font-medium">Node.js</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl text-[#00ADD8]">data_object</span>
+<span class="text-xs font-medium">Go</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl text-[#FF9900]">cloud</span>
+<span class="text-xs font-medium">AWS</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl text-[#38B2AC]">style</span>
+<span class="text-xs font-medium">Tailwind</span>
+</div>
+</div>
+</div>
+<!-- Latest Projects Section -->
+<div class="w-full py-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div>
+<h2 class="text-slate-900 dark:text-white tracking-tight text-3xl font-bold leading-tight">Latest Projects</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-2">A selection of my recent open source contributions and experiments.</p>
+</div>
+<div class="flex gap-2 flex-wrap">
+<button class="px-4 py-2 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold">All</button>
+<button class="px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 text-sm font-medium transition-colors">React</button>
+<button class="px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 text-sm font-medium transition-colors">Node.js</button>
+</div>
+</div>
+<!-- Featured Large Card -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+<div class="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300">
+<div class="absolute top-4 right-4 z-10">
+<div class="flex gap-2">
+<span class="bg-black/50 backdrop-blur text-white text-xs px-2 py-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">star</span> 1.2k
+                                        </span>
+</div>
+</div>
+<div class="h-64 w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Dashboard analytics interface preview" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAi81NOopcJ_n8z6jOrExf6FlKbmgmHXL9tMhgB0Tvl-bgBgiMncod164tUWr7nWZ2P6pm7_Wkh2u2clTG9bySIJpyVS48PRZ4me0GsklzX9rzNJ1cOpIJMExrLvX2rk1J26saq2tXUBb1WVfhPRgOCAxr0gNpPiKPVs9SlNsxKeJ4m9geNjz_mVU3MpvheldnzFWF4l47PQNcPeUCheBFE8Pg33yLCOv_4EiSvU84zdbldapuQBDAeunG91mdI-vYo31uVXIfzqes");'></div>
+<div class="p-6">
+<div class="flex items-center gap-2 mb-3">
+<span class="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded uppercase tracking-wider">Featured</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">• Updated 2 days ago</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">Analytics Dashboard Pro</h3>
+<p class="text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">A comprehensive analytics dashboard built with React, D3.js, and Tailwind CSS. Features real-time data visualization and export capabilities.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex gap-2">
+<span class="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded"><span class="w-2 h-2 rounded-full bg-[#61DAFB]"></span> React</span>
+<span class="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded"><span class="w-2 h-2 rounded-full bg-[#3178C6]"></span> TypeScript</span>
+</div>
+<a class="text-primary hover:text-blue-600 font-semibold text-sm flex items-center gap-1" href="#">
+                                            View Repo <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Grid of smaller cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Card 2 -->
+<div class="flex flex-col rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-5 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-primary">
+<span class="material-symbols-outlined">api</span>
+</div>
+<span class="text-xs text-slate-500 flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">star</span> 84</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">E-commerce API</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4 flex-grow">Scalable RESTful API for high-traffic stores using Go and Redis.</p>
+<div class="flex items-center gap-2 mt-2">
+<span class="w-3 h-3 rounded-full bg-[#00ADD8]"></span>
+<span class="text-xs text-slate-600 dark:text-slate-300">Go</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-5 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-purple-50 dark:bg-purple-900/20 rounded-lg text-purple-600">
+<span class="material-symbols-outlined">extension</span>
+</div>
+<span class="text-xs text-slate-500 flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">star</span> 230</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">VS Code Theme</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4 flex-grow">A dark, high-contrast theme designed for focus and clarity.</p>
+<div class="flex items-center gap-2 mt-2">
+<span class="w-3 h-3 rounded-full bg-[#F1E05A]"></span>
+<span class="text-xs text-slate-600 dark:text-slate-300">JSON</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="flex flex-col rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-5 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-green-50 dark:bg-green-900/20 rounded-lg text-green-600">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<span class="text-xs text-slate-500 flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">star</span> 45</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">CLI Toolset</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4 flex-grow">Automating daily dev workflows with Rust.</p>
+<div class="flex items-center gap-2 mt-2">
+<span class="w-3 h-3 rounded-full bg-[#DEA584]"></span>
+<span class="text-xs text-slate-600 dark:text-slate-300">Rust</span>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="flex flex-col rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-5 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-orange-50 dark:bg-orange-900/20 rounded-lg text-orange-600">
+<span class="material-symbols-outlined">web</span>
+</div>
+<span class="text-xs text-slate-500 flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">star</span> 156</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Portfolio v2</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4 flex-grow">The previous iteration of my portfolio site.</p>
+<div class="flex items-center gap-2 mt-2">
+<span class="w-3 h-3 rounded-full bg-[#e34c26]"></span>
+<span class="text-xs text-slate-600 dark:text-slate-300">HTML</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Experience Section (LinkedIn Style) -->
+<div class="w-full py-12">
+<h2 class="text-slate-900 dark:text-white tracking-tight text-3xl font-bold leading-tight mb-8">Experience</h2>
+<div class="flex flex-col gap-6">
+<!-- Job Item 1 -->
+<div class="flex flex-col md:flex-row gap-4 p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="shrink-0">
+<div class="w-12 h-12 rounded bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-400">business</span>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Senior Frontend Engineer</h3>
+<p class="text-slate-600 dark:text-slate-300 font-medium">TechNova Inc.</p>
+</div>
+<span class="text-sm text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-700/50 px-3 py-1 rounded-full whitespace-nowrap mt-2 md:mt-0 self-start">2021 - Present</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                                        Spearheaded the migration of the legacy dashboard to React 18, improving load times by 40%. Mentored junior developers and established code quality standards using ESLint and Prettier.
+                                    </p>
+<div class="flex gap-2 flex-wrap">
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded">React</span>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded">Redux</span>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded">AWS</span>
+</div>
+</div>
+</div>
+<!-- Job Item 2 -->
+<div class="flex flex-col md:flex-row gap-4 p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="shrink-0">
+<div class="w-12 h-12 rounded bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-400">apartment</span>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Full Stack Developer</h3>
+<p class="text-slate-600 dark:text-slate-300 font-medium">Creative Solutions Ltd.</p>
+</div>
+<span class="text-sm text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-700/50 px-3 py-1 rounded-full whitespace-nowrap mt-2 md:mt-0 self-start">2019 - 2021</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                                        Developed and maintained multiple client e-commerce sites. Integrated payment gateways (Stripe, PayPal) and built custom CMS solutions using Node.js and MongoDB.
+                                    </p>
+<div class="flex gap-2 flex-wrap">
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded">Node.js</span>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded">MongoDB</span>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded">Vue.js</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Articles / Medium Section -->
+<div class="w-full py-12">
+<div class="flex justify-between items-end mb-8">
+<h2 class="text-slate-900 dark:text-white tracking-tight text-3xl font-bold leading-tight">Recent Articles</h2>
+<a class="hidden md:flex items-center text-primary font-bold text-sm hover:underline" href="#">Read on Medium <span class="material-symbols-outlined text-sm ml-1">open_in_new</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Article 1 -->
+<a class="group block h-full" href="#">
+<div class="flex flex-col h-full rounded-xl overflow-hidden bg-white dark:bg-slate-800 shadow-sm hover:shadow-lg transition-all duration-300">
+<div class="h-48 w-full bg-cover bg-center" data-alt="Computer screen displaying code syntax" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAFvZhsnHK_byObuvt_JnrGKrFnSD1NWAc2xEFz6tumUyJoCMhN44xQeg5FKUtWx_-XMqsURjGhRq1vjywBAOlk1_JXVdfstCly2MFiFMyV5hDcl8Ny8__L6q8a6daGYO44fDe6S5Ng_kY3dtc6zrMrmMJAiB4jw-WtQUOW4morfVLl9j7AJ4AvLPkzFTut94HgbhfhPjW26YflCJdlpUT6un4bArrvCILC4E169chifQdL56hi81OJxKF3hOpL6x1dhNVkBISOJd8");'></div>
+<div class="p-5 flex flex-col flex-grow">
+<span class="text-xs font-semibold text-primary uppercase tracking-wide mb-2">Development</span>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">Mastering React Hooks in 2024</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-3 mb-4 flex-grow">A deep dive into advanced hooks patterns and performance optimization techniques for modern React applications.</p>
+<div class="flex items-center text-xs text-slate-400">
+<span>5 min read</span>
+<span class="mx-2">•</span>
+<span>Oct 12, 2023</span>
+</div>
+</div>
+</div>
+</a>
+<!-- Article 2 -->
+<a class="group block h-full" href="#">
+<div class="flex flex-col h-full rounded-xl overflow-hidden bg-white dark:bg-slate-800 shadow-sm hover:shadow-lg transition-all duration-300">
+<div class="h-48 w-full bg-cover bg-center" data-alt="Abstract fluid blue shapes background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBb08_vPaOyw611SAc-jc_8WR936xwg5qnILKbE6oar3LFBhwsjuzP8ftgA-g0L16Aa-Yx4pUji9dcRNhlFVQAL73Ea7jDHkFNrS2QCo_llWxUBHc3G53M7wSRsXul0BtNpYzX5HqwzlAQyYonAomXzekAjXIvSri_4CLsWysigY4elTN07Ry9qOvrqJO6mVlPZMbrvmWsuh5PWo509gAfibOu8dixO7Ye-gWrpRhdU7NOBReNFhb1QIK1utdQdM2UjEVARDyNCwTQ");'></div>
+<div class="p-5 flex flex-col flex-grow">
+<span class="text-xs font-semibold text-primary uppercase tracking-wide mb-2">Design System</span>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">Why You Need a Design System</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-3 mb-4 flex-grow">Bridging the gap between design and engineering to scale product development efficiently.</p>
+<div class="flex items-center text-xs text-slate-400">
+<span>7 min read</span>
+<span class="mx-2">•</span>
+<span>Sep 28, 2023</span>
+</div>
+</div>
+</div>
+</a>
+<!-- Article 3 -->
+<a class="group block h-full" href="#">
+<div class="flex flex-col h-full rounded-xl overflow-hidden bg-white dark:bg-slate-800 shadow-sm hover:shadow-lg transition-all duration-300">
+<div class="h-48 w-full bg-cover bg-center" data-alt="Laptop keyboard and notebook on desk" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-9-yaRdX7pNmBpbevHZYK_fL215NlrGF736szXTpIdbNR_WBSYhV7EEqmraB5ynOj15jT5QHoJ0nmTs1AuqrhuMSBRDYu-E5MV0c5j2petxqnBkaxWOxtbEhUOEMOEe4TdEWGUe99q_MOmi15baxm9-o3R6JLBsFt-AG-P-BK92isJ6eI3q4foaxmbOW8XHuA4Zi4XLhRRp3MOHQlFueqek5konULwPifc8YBxCvrMY6EAYbl_9Z0E8_UOuRORV2zRh12FPS2UKA");'></div>
+<div class="p-5 flex flex-col flex-grow">
+<span class="text-xs font-semibold text-primary uppercase tracking-wide mb-2">Career</span>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">From Junior to Senior Dev</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-3 mb-4 flex-grow">Lessons learned and key soft skills required to level up your engineering career.</p>
+<div class="flex items-center text-xs text-slate-400">
+<span>10 min read</span>
+<span class="mx-2">•</span>
+<span>Aug 15, 2023</span>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<!-- CTA / Footer Area -->
+<div class="w-full mt-12 mb-8">
+<div class="relative rounded-2xl bg-slate-900 dark:bg-slate-800 p-8 md:p-12 overflow-hidden text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-0 -mb-10 -ml-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+<div class="relative z-10 max-w-xl">
+<h2 class="text-white text-3xl font-bold mb-4">Ready to start a project?</h2>
+<p class="text-slate-300 text-lg">I'm currently available for freelance work and open to new opportunities. Let's build something amazing together.</p>
+</div>
+<div class="relative z-10 flex gap-4">
+<button class="bg-primary hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                                    Contact Me
+                                </button>
+</div>
+</div>
+</div>
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 pt-8 pb-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 dark:text-slate-400 text-sm">
+<p>© 2024 DevPortfolio. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Twitter</a>
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-primary transition-colors" href="#">GitHub</a>
+<a class="hover:text-primary transition-colors" href="#">Medium</a>
+</div>
+</footer>
+</div>
+</div>
+</main>
+</div>
+</body></html>

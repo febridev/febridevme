@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getLatestLinkedInPosts } from '@/app/lib/services/linkedin';
+import { getLinkedInExperience } from '@/app/lib/services/linkedin';
 import { ApiResponse } from '@/app/types';
 
 export async function GET(request: NextRequest) {
@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
   const limit = parseInt(searchParams.get('limit') || '10');
 
   try {
-    const data = await getLatestLinkedInPosts(limit);
+    const data = await getLinkedInExperience(limit);
 
     const response: ApiResponse<typeof data> = {
       success: true,
@@ -18,7 +18,7 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     const response: ApiResponse<null> = {
       success: false,
-      error: error instanceof Error ? error.message : 'Failed to fetch LinkedIn posts',
+      error: error instanceof Error ? error.message : 'Failed to fetch LinkedIn experience',
     };
 
     return NextResponse.json(response, { status: 500 });

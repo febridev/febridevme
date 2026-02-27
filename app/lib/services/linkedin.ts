@@ -52,5 +52,36 @@ export const getLatestLinkedInPosts = async (limit: number = 10): Promise<Linked
   }
 };
 
+// Fallback experience data for when API is not available
+const fallbackExperience = [
+  {
+    id: '1',
+    title: 'Senior Frontend Engineer',
+    company: 'TechNova Inc.',
+    duration: '2021 - Present',
+    description: 'Spearheaded the migration of the legacy dashboard to React 18, improving load times by 40%. Mentored junior developers and established code quality standards using ESLint and Prettier.',
+    skills: ['React', 'Redux', 'AWS'],
+  },
+  {
+    id: '2',
+    title: 'Full Stack Developer',
+    company: 'Creative Solutions Ltd.',
+    duration: '2019 - 2021',
+    description: 'Developed and maintained multiple client e-commerce sites. Integrated payment gateways (Stripe, PayPal) and built custom CMS solutions using Node.js and MongoDB.',
+    skills: ['Node.js', 'MongoDB', 'Vue.js'],
+  },
+];
+
+export const getLinkedInExperience = async (limit: number = 10) => {
+  try {
+    // TODO: Implement actual LinkedIn API call for work experience
+    // For now, return fallback data
+    return fallbackExperience.slice(0, limit);
+  } catch (error) {
+    console.error('Failed to fetch LinkedIn experience:', error);
+    return fallbackExperience.slice(0, limit);
+  }
+};
+
 // Note: LinkedIn's official API requires proper authentication and may have limitations
 // Consider using LinkedIn Feed API or a third-party service for production
