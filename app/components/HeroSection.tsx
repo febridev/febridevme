@@ -2,10 +2,10 @@
 
 export default function HeroSection() {
   return (
-    <div className="@container">
-      <div className="flex flex-col-reverse gap-6 py-10 @[480px]:gap-8 @[864px]:flex-row @[864px]:items-center">
+    <div>
+      <div className="flex flex-col-reverse gap-6 py-10 md:gap-8 md:flex-row md:items-center">
         {/* Left Content */}
-        <div className="flex flex-col gap-6 @[480px]:gap-8 flex-1">
+        <div className="flex flex-col gap-6 md:gap-8 flex-1">
           <div className="flex flex-col gap-4 text-left">
             {/* Status Badge */}
             <div className="inline-flex items-center gap-2 self-start rounded-full bg-primary/10 px-3 py-1 text-primary dark:text-blue-400">
@@ -17,7 +17,7 @@ export default function HeroSection() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl lg:text-6xl">
+            <h1 className="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl lg:text-6xl">
               Building the future, <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">
                 one commit at a time.
@@ -63,7 +63,7 @@ export default function HeroSection() {
         </div>
 
         {/* Right Image */}
-        <div className="w-full flex-1 flex justify-center @[864px]:justify-end">
+        <div className="w-full flex-1 flex justify-center md:justify-end">
           <div className="relative w-full max-w-[500px] aspect-square rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-2xl rotate-3 hover:rotate-0 transition-all duration-500">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent z-10"></div>
             <div
