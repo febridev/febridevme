@@ -11,8 +11,8 @@ const technologies = [
 
 export default function TechStack() {
   return (
-    <div className="w-full py-12 border-y border-slate-200 dark:border-slate-800 my-10 bg-white dark:bg-slate-900/50">
-      <p className="text-center text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-6">
+    <div className="w-full py-12 border-y border-slate-200 my-10 bg-white">
+      <p className="text-center text-sm font-semibold text-slate-500 uppercase tracking-widest mb-6">
         Technologies I work with
       </p>
       <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
@@ -21,7 +21,7 @@ export default function TechStack() {
             <span className="material-symbols-outlined text-4xl" style={{ color: tech.color }}>
               {tech.icon}
             </span>
-            <span className="text-xs font-medium">{tech.name}</span>
+            <span className="text-xs font-medium text-slate-900">{tech.name}</span>
           </div>
         ))}
       </div>

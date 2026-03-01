@@ -65,7 +65,7 @@ export default function ExperienceSection() {
 
   return (
     <div className="w-full py-12" id="experience">
-      <h2 className="text-slate-900 dark:text-white tracking-tight text-3xl font-bold leading-tight mb-8">Experience</h2>
+      <h2 className="text-slate-900 tracking-tight text-3xl font-bold leading-tight mb-8">Experience</h2>
 
       {error && <div className="text-center text-red-500 mb-8">Error loading experience: {error}</div>}
 
@@ -73,29 +73,29 @@ export default function ExperienceSection() {
         {displayExperiences.map((experience) => (
           <div
             key={experience.id}
-            className="flex flex-col md:flex-row gap-4 p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm"
+            className="flex flex-col md:flex-row gap-4 p-6 rounded-xl bg-white border border-slate-200 shadow-sm"
           >
             <div className="shrink-0">
-              <div className="w-12 h-12 rounded bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
+              <div className="w-12 h-12 rounded bg-slate-100 flex items-center justify-center">
                 <span className="material-symbols-outlined text-slate-400">business</span>
               </div>
             </div>
             <div className="flex-grow">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white">{experience.title}</h3>
-                  <p className="text-slate-600 dark:text-slate-300 font-medium">{experience.company}</p>
+                  <h3 className="text-lg font-bold text-slate-900">{experience.title}</h3>
+                  <p className="text-slate-600 font-medium">{experience.company}</p>
                 </div>
-                <span className="text-sm text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-700/50 px-3 py-1 rounded-full whitespace-nowrap mt-2 md:mt-0 self-start">
+                <span className="text-sm text-slate-500 bg-slate-50 px-3 py-1 rounded-full whitespace-nowrap mt-2 md:mt-0 self-start">
                   {experience.duration}
                 </span>
               </div>
-              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">{experience.description}</p>
+              <p className="text-slate-500 text-sm leading-relaxed mb-4">{experience.description}</p>
               <div className="flex gap-2 flex-wrap">
                 {experience.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="text-xs font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded"
+                    className="text-xs font-medium text-slate-600 bg-slate-100 px-2 py-1 rounded"
                   >
                     {skill}
                   </span>

@@ -3,7 +3,7 @@
 export default function CTASection() {
   return (
     <div className="w-full mt-12 mb-8">
-      <div className="relative rounded-2xl bg-slate-900 dark:bg-slate-800 p-8 md:p-12 overflow-hidden text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="relative rounded-2xl bg-slate-900 p-8 md:p-12 overflow-hidden text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
         <div className="relative z-10 max-w-xl">
