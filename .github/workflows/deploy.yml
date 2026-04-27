@@ -1,21 +1,22 @@
 name: Build and Deploy Tailwind to Pages
 
-# Kapan aksi ini dijalankan?
 on:
   push:
-    branches: ["main"] # Jalankan setiap ada kode baru yang di-push ke branch 'main'
-  workflow_dispatch: # Memungkinkan tombol 'jalankan manual' di dashboard GitHub
+    branches: ["main"] 
+  workflow_dispatch:
 
-# Izin yang dibutuhkan GitHub untuk mengubah halaman Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Mencegah penumpukan proses jika Anda push berkali-kali dengan cepat
 concurrency:
   group: "pages"
   cancel-in-progress: false
+
+# 1. Tambahkan baris ini untuk mengikuti standar Node 24 GitHub
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   build-and-deploy:
@@ -30,7 +31,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Menggunakan Node.js versi 20 yang stabil
+          # 2. Ubah versi Node ke 24
+          node-version: '24' 
           cache: 'npm'
 
       - name: Install dependencies
@@ -45,7 +47,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './public' # Mengambil folder public yang sudah berisi CSS hasil build
+          path: './public'
 
       - name: Deploy to GitHub Pages
         id: deployment
