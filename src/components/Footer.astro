@@ -1,0 +1,19 @@
+---
+import { site } from '../data/site';
+const year = new Date().getFullYear();
+---
+<footer class="launch" id="contact" data-hangar="contact">
+  <p class="launch__kicker">Next sortie</p>
+  <a class="launch__cta" href={`mailto:${site.email}`} data-fill>
+    <span class="launch__fill" aria-hidden="true"></span>
+    <span class="launch__big">Write to {site.name}</span>
+    <span class="launch__mail">{site.email}</span>
+  </a>
+  <div class="launch__base">
+    <ul class="launch__links">
+      {site.socials.map((s) => <li><a href={s.href} rel="me noopener" target="_blank">{s.label}</a></li>)}
+    </ul>
+    <p class="launch__colophon">{site.colophon}</p>
+    <p class="launch__year">© {year} {site.name}</p>
+  </div>
+</footer>

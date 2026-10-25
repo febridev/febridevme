@@ -1,0 +1,14 @@
+---
+// Live readouts from the cockpit view, plus the boost control. Hidden when there is no WebGL.
+---
+<aside class="hud" aria-label="Cockpit controls" data-hud>
+  <dl class="hud__read" aria-hidden="true">
+    <div><dt>Stage</dt><dd data-hud-stage>Catapult</dd></div>
+    <div><dt>Systems</dt><dd><span data-hud-sys>000</span>%</dd></div>
+    <div><dt>Thrust</dt><dd><span data-hud-thrust>000</span>%</dd></div>
+  </dl>
+  <button class="boost" type="button" data-boost>
+    <span class="boost__gauge" aria-hidden="true"></span>
+    <span class="boost__label">Hold to boost</span>
+  </button>
+</aside>

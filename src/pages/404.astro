@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+---
+<Base title="Signal lost" description={`This page is not in the manual for unit ${site.unit}. The main monitor lost its feed; head back to the hangar and pick another sortie.`} footer={false}>
+  <section class="lost" data-hangar="lost" aria-labelledby="lost-title">
+    <p class="lost__code" data-reveal="fade" data-intro>Error 404, page not found</p>
+    <h1 class="lost__title" id="lost-title" data-split="chars" data-intro>Signal lost</h1>
+    <p class="lost__text" data-split="lines" data-intro data-delay="0.2">This page is not in the manual. The monitor lost its feed somewhere over the canyon, and there is nothing here to launch.</p>
+    <a class="lost__back roll" href="/" data-reveal="fade" data-intro data-delay="0.4"><span>Back to the hangar</span><span aria-hidden="true">Back to the hangar</span></a>
+  </section>
+</Base>
