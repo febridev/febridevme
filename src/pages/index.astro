@@ -1,0 +1,82 @@
+---
+import Base from '../layouts/Base.astro';
+import Plate from '../components/Plate.astro';
+import { site, projects } from '../data/site';
+---
+<Base>
+  <section class="hero" data-hangar="hero" aria-labelledby="hero-title">
+    <picture class="hangar-fallback">
+      <img src="/fb02.webp" width="1600" height="1000" alt={`The view from the cockpit of unit ${site.unit}: a launch catapult running to an open hangar door, drawn in grey with ink outlines`} loading="lazy" />
+    </picture>
+    <p class="hero__unit" data-reveal="fade" data-intro data-delay="0.2">Cockpit, unit {site.unit}</p>
+    <h1 class="hero__title" id="hero-title" data-split="chars" data-intro>{site.name}</h1>
+    <div class="hero__copy">
+      <p class="hero__line" data-split="lines" data-intro data-delay="0.25">{site.hero.line}</p>
+      <p class="hero__statement" data-split="lines" data-intro data-delay="0.35">{site.hero.statement}</p>
+    </div>
+    <a class="hero__cue" href="#line" data-reveal="fade" data-intro data-delay="0.6">
+      <span class="hero__tick" aria-hidden="true"></span>Scroll to run the line
+    </a>
+  </section>
+
+  <section class="statement" data-hangar="statement" aria-label="Approach">
+    <p class="statement__text" data-split="lines">{site.statement}</p>
+  </section>
+
+  <section class="line" id="line" aria-labelledby="line-title">
+    <header class="line__head">
+      <h2 class="h2" id="line-title" data-split="lines">Assembly line</h2>
+      <p class="line__intro" data-reveal="up">Four stages, in this order, on every project. Watch the main monitor go through them.</p>
+    </header>
+    <ol class="stages">
+      {site.stages.map((s, i) => (
+        <li class="stage" data-hangar={s.key} data-readout={s.readout}>
+          <span class="stage__n" aria-hidden="true">0{i + 1}</span>
+          <h3 class="stage__title" data-split="lines">{s.title}</h3>
+          <p class="stage__text" data-reveal="up">{s.text}</p>
+          <p class="stage__readout" data-reveal="fade" aria-hidden="true">{s.readout}</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="work" id="work" data-hangar="work" aria-labelledby="work-title">
+    <h2 class="h2" id="work-title" data-split="lines">Selected work</h2>
+    <ul class="index" data-index>
+      {projects.map((p) => (
+        <li class="index__item">
+          <a class="index__link" href={p.repo} target="_blank" rel="noopener noreferrer" data-preview={p.slug} data-title={p.title}>
+            <span class="index__code">{p.code}</span>
+            <span class="index__title"><span>{p.title}</span></span>
+            <span class="index__role">{p.role.join(', ')}</span>
+            <span class="index__year">{p.year}</span>
+            <Plate class="index__thumb" seed={p.seed} code={p.code} title={p.title} sheet="1/4" />
+          </a>
+        </li>
+      ))}
+    </ul>
+    <div class="preview" aria-hidden="true">
+      {projects.map((p) => (
+        <div class="preview__plate" data-plate={p.slug}><Plate seed={p.seed} code={p.code} title={p.title} sheet="1/4" /></div>
+      ))}
+    </div>
+  </section>
+
+  <section class="spec" data-hangar="spec" aria-labelledby="spec-title">
+    <h2 class="h2" id="spec-title" data-split="lines">Service record</h2>
+    <dl class="spec__list">
+      {site.spec.map((s) => (
+        <div class="spec__row" data-reveal="up">
+          <dt>{s.label}</dt>
+          <dd>{s.value}</dd>
+        </div>
+      ))}
+    </dl>
+  </section>
+
+  <section class="pilot" id="pilot" data-hangar="pilot" aria-labelledby="pilot-title">
+    <h2 class="h2 pilot__title" id="pilot-title" data-split="lines">Pilot</h2>
+    <p class="pilot__bio" data-split="lines">{site.pilot.bio}</p>
+    <p class="pilot__now" data-reveal="up"><span class="pilot__dot" aria-hidden="true"></span>{site.pilot.now}</p>
+  </section>
+</Base>

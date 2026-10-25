@@ -1,0 +1,8 @@
+---
+// A generated technical sheet. Described by `label`; an empty label marks it decorative.
+import { plateSvg } from '../lib/plate';
+interface Props { seed: number; code: string; title: string; sheet: string; label?: string; class?: string; kind?: number }
+const { seed, code, title, sheet, label = '', class: cls, kind } = Astro.props;
+const a11y = label ? { role: 'img' as const, 'aria-label': label } : { 'aria-hidden': 'true' as const };
+---
+<div class:list={['plate', cls]} {...a11y} set:html={plateSvg(seed, code, title, sheet, kind)} />

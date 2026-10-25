@@ -1,0 +1,27 @@
+---
+import { site } from '../data/site';
+interface Props { current?: 'work' | 'pilot' | 'contact' }
+const { current } = Astro.props;
+const links = [
+  { key: 'work', label: 'Work', href: '/#work' },
+  { key: 'pilot', label: 'Pilot', href: '/#pilot' },
+  { key: 'contact', label: 'Contact', href: '/#contact' },
+] as const;
+---
+<header class="frame">
+  <a class="frame__tl brand" href="/">
+    <span class="roll"><span>{site.name}</span><span aria-hidden="true">{site.name}</span></span>
+    <span class="brand__unit">{site.unit}</span>
+  </a>
+  <nav class="frame__tr" aria-label="Main">
+    <ul class="nav">
+      {links.map((l) => (
+        <li>
+          <a class="roll nav__link" href={l.href} data-spy={l.key} aria-current={current === l.key ? 'page' : undefined}>
+            <span>{l.label}</span><span aria-hidden="true">{l.label}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>

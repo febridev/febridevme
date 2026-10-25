@@ -1,0 +1,24 @@
+---
+// Boot check printed on the blast doors. Each row is a real loading task (see motion/setup.ts).
+import { site } from '../data/site';
+---
+<div id="loader" role="status" aria-label="Loading">
+  <div class="door door--top" data-door="top">
+    <div class="door__row">
+      <span class="door__unit">Unit {site.unit}</span>
+      <span>Boot sequence</span>
+    </div>
+  </div>
+  <div class="door door--bottom" data-door="bottom">
+    <ul class="checks">
+      <li data-check="type"><span>Typefaces</span><b>Wait</b></li>
+      <li data-check="frame"><span>Flight systems</span><b>Wait</b></li>
+      <li data-check="lights"><span>Main monitor</span><b>Wait</b></li>
+    </ul>
+    <div class="door__row">
+      <span>{site.name}, {site.role.toLowerCase()}</span>
+      <span class="loader__count"><span class="sr-only">Loaded </span><span data-loader-count>000</span>%</span>
+    </div>
+    <div class="loader__bar" data-loader-bar></div>
+  </div>
+</div>
