@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    image: febridevme:latest
+    container_name: febridevme
+    restart: unless-stopped
+    ports:
+      - 127.0.0.1:8004:80
